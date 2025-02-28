@@ -9,7 +9,7 @@ from PyQt5 import QtWidgets
 import pygame
 
 
-
+#点击音效
 file = r'ouni.mp3'
 def music():
     # songs = os.listdir(music_dir)
@@ -22,7 +22,7 @@ def music():
     track = pygame.mixer.music.load(file)
     pygame.mixer.music.play()
     pygame.mixer.music.set_volume(0.4)
-
+#退出————————————————
 class yimoduo(QWidget):
     def __init__(self):
         QtWidgets.QWidget.__init__(self)
@@ -37,8 +37,8 @@ class yimoduo(QWidget):
         self.trayIcon.setIcon(QIcon("pet_ico.png"))
         self.trayIcon.setContextMenu(self.trayIconMenu)
         self.trayIcon.show()
-
-
+#——————————————————————
+#动作————————————————
 class myPet(QWidget):
     def __init__(self, parent = None):
         QtWidgets.QWidget.__init__(self)
@@ -116,7 +116,7 @@ class myPet(QWidget):
     def mouseReleaseEvent(self, QMouseEvent):
         self.m_drag=False
         self.setCursor(QCursor(Qt.ArrowCursor))
-
+#main______________
 if __name__ == "__main__":
     global pets
     pets=[]
