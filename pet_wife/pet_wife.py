@@ -99,7 +99,8 @@ class myPet(QWidget):
         screen = QDesktopWidget().screenGeometry()
         size =  self.geometry()
         self.move(int((screen.width()-size.width())*random.random()), int((screen.height()-size.height())*random.random()))
-
+    
+    #点击事件
     def mousePressEvent(self, event):
         if event.button()==Qt.LeftButton:
             self.m_drag=True
